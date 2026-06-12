@@ -1,0 +1,214 @@
+:root {
+  color-scheme: light;
+  --bg: #fff7ed;
+  --card: #ffffff;
+  --text: #2b1710;
+  --muted: #714733;
+  --wine: #7f1d1d;
+  --wine-dark: #4c0f13;
+  --gold: #f59e0b;
+  --shadow: 0 18px 45px rgba(76, 15, 19, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.25), transparent 32rem),
+    linear-gradient(180deg, #fff7ed 0%, #fdebd1 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+main {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero,
+.photo-card,
+.section,
+.grid article,
+.cta {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(127, 29, 29, 0.12);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  min-height: 88vh;
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.badge {
+  justify-self: center;
+  margin: 0;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: #fee2e2;
+  color: var(--wine);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0.3rem;
+  font-size: clamp(2.35rem, 12vw, 5.5rem);
+  line-height: 0.95;
+  color: var(--wine-dark);
+}
+
+h2 {
+  color: var(--wine);
+  font-size: clamp(1.6rem, 7vw, 2.6rem);
+  line-height: 1.05;
+}
+
+h3 {
+  color: var(--wine-dark);
+  font-size: 1.25rem;
+}
+
+.intro {
+  max-width: 42rem;
+  margin-inline: auto;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  background: var(--wine);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 10px 22px rgba(127, 29, 29, 0.25);
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--wine-dark);
+  transform: translateY(-1px);
+}
+
+.secondary {
+  background: var(--gold);
+  color: #321400;
+}
+
+.secondary:hover,
+.secondary:focus-visible {
+  background: #d97706;
+}
+
+.photo-card {
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  max-height: 78vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.photo-card p {
+  margin: 0;
+  padding: 1rem;
+  color: var(--muted);
+  font-weight: 700;
+  text-align: center;
+}
+
+.section,
+.cta,
+.grid article {
+  padding: 1.25rem;
+}
+
+.section,
+.grid,
+.cta {
+  margin-top: 1rem;
+}
+
+.section p,
+.grid p,
+.cta p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid article {
+  border-left: 0.45rem solid var(--gold);
+}
+
+.cta {
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, rgba(127, 29, 29, 0.96), rgba(76, 15, 19, 0.96));
+  color: #fff;
+}
+
+.cta h2,
+.cta p {
+  color: #fff;
+}
+
+.cta p {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+@media (min-width: 720px) {
+  main {
+    padding: 2rem;
+  }
+
+  .hero,
+  .section,
+  .cta,
+  .grid article {
+    padding: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
